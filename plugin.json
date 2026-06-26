@@ -1,0 +1,12 @@
+{
+  "license": "GPL-3.0-or-later",
+  "type": "ember_matrix_demo",
+  "label": "Démo matrice Ember+",
+  "version": "0.1.0",
+  "runtime": "inprocess",
+  "ember": true,
+  "description": "Contributeur de test : matrice 4×4 oneToN en mémoire, pour valider le type Matrix du service Ember+ sans matériel. Expose ember/tree + ember/connect ; preuve de généricité.",
+  "badge": { "label": "Ember", "class": "tool-ember", "oklch": "0.80 0.10 300" },
+  "nav": { "section": "outils", "label": "Outils", "order": 90 },
+  "ui": { "page_html": "page.html", "page_js": "page.js" }
+}
