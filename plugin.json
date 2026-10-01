@@ -6,7 +6,41 @@
   "runtime": "inprocess",
   "ember": true,
   "description": "Contributeur de test : matrice 4×4 oneToN en mémoire, pour valider le type Matrix du service Ember+ sans matériel. Expose ember/tree + ember/connect ; preuve de généricité.",
-  "badge": { "label": "Ember", "class": "tool-ember", "oklch": "0.80 0.10 300" },
-  "nav": { "section": "outils", "label": "Outils", "order": 90 },
-  "ui": { "page_html": "page.html", "page_js": "page.js" }
+  "badge": {
+    "label": "Ember",
+    "class": "tool-ember",
+    "oklch": "0.80 0.10 300"
+  },
+  "nav": {
+    "section": "outils",
+    "label": "Outils",
+    "order": 90
+  },
+  "ui": {
+    "page_html": "page.html",
+    "page_js": "page.js"
+  },
+  "permissions": [
+    {
+      "id": "matrix.route",
+      "label": "Commuter la matrice de démo",
+      "default_roles": [
+        "operator"
+      ]
+    }
+  ],
+  "acl": {
+    "routes": [
+      {
+        "method": "POST",
+        "path": "ember/connect",
+        "perm": "matrix.route"
+      },
+      {
+        "method": "*",
+        "path": "**",
+        "perm": "matrix.route"
+      }
+    ]
+  }
 }
